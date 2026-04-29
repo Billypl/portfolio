@@ -12,7 +12,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    padding: 100px 80px 0;
+    padding: 0 80px 0;
     gap: 40px;
     position: relative;
 }
@@ -30,7 +30,6 @@
     letter-spacing: .28em;
     text-transform: uppercase;
     color: var(--red);
-    margin-bottom: 14px;
 }
 
 .name {
@@ -40,6 +39,7 @@
     line-height: .9;
     text-transform: uppercase;
     margin-bottom: 28px;
+    margin-top: 0px;
 }
 
 .name span {
