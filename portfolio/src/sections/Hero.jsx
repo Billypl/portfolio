@@ -9,7 +9,7 @@ function Hero() {
             <p className={styles.eyebrow}>Student informatyki - politechnika gdańska</p>
             <div className={styles.content}>
                 <h1 className={styles.name}>BILLY<span>.</span></h1>
-                <p className={styles.desc1}>Jestem studentem 3 roku informatyki na Politechnice Gdańskiej. Kocham czytać książki, a na ogniska nie ruszam się bez gitary. Moją pasją jest programowanie — z naciskiem na backend.</p>
+                <p className={styles.desc1}>Studiuję Informatykę na drugim stopniu na Politechnice Gdańskiej. Kocham czytać książki, a na ogniska nie ruszam się bez gitary. Moją pasją jest programowanie - z naciskiem na backend.</p>
                 <p className={styles.desc2}>Chętnie pomagam w pracach domowych i udzielam korepetycji z informatyki.</p>
             </div>
             <div className={styles.buttons}>
