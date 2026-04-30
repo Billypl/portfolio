@@ -1,0 +1,19 @@
+import styles from './Waves.module.css'
+
+function Wave1({ color = "red", width = "100%", height = "auto" }) {
+    return (<>
+        <div className={styles.waveContainer}>
+            <svg 
+                id="visual" 
+                preserveAspectRatio="none"
+                viewBox="0 0 2560 200" 
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+                <path d="M0 178L53.3 161.2C106.7 144.3 213.3 110.7 320 101.7C426.7 92.7 533.3 108.3 640 133.7C746.7 159 853.3 194 960 186.8C1066.7 179.7 1173.3 130.3 1280 102.2C1386.7 74 1493.3 67 1600 85.8C1706.7 104.7 1813.3 149.3 1920 173.2C2026.7 197 2133.3 200 2240 190.2C2346.7 180.3 2453.3 157.7 2506.7 146.3L2560 135L2560 0L2506.7 0C2453.3 0 2346.7 0 2240 0C2133.3 0 2026.7 0 1920 0C1813.3 0 1706.7 0 1600 0C1493.3 0 1386.7 0 1280 0C1173.3 0 1066.7 0 960 0C853.3 0 746.7 0 640 0C533.3 0 426.7 0 320 0C213.3 0 106.7 0 53.3 0L0 0Z" 
+                fill="#0b0b0b">
+                </path>
+            </svg>
+        </div>
+    </>);
+}
+
+export default Wave1
