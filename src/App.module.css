@@ -2,6 +2,7 @@
     background: var(--black);
     max-width: 1900px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 

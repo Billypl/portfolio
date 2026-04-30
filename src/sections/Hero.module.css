@@ -14,13 +14,13 @@
     flex-wrap: wrap;  
     position: relative;
     gap: 50px;
+    /* padding-top: 80px !important; */
 }
 
 .textCol {
     flex: 1;
     position: relative;
     text-align: left;
-    /* z-index: 1; */
 }
 
 .eyebrow {
@@ -88,8 +88,10 @@
 @media (max-width: 900px) {
   .hero {
     flex-direction: column-reverse;
+    justify-content: flex-end;
     gap: 20px;
     padding: 30px;
+    margin-top: 64px;
   }
 
   .imageCol, .textCol {
