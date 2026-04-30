@@ -1,17 +1,22 @@
+/* === Navbar === */
 nav {
     font-family: var(--heading);
     background-color: #0c0b0b;
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
+    top: 0; left: 0; right: 0;
+    z-index: 2; /* above overlay */
     height: 64px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 32px;
+    padding: 0 32px;
     border-bottom: 1px solid var(--border);
+    transition: border-color 0.3s;
+}
+
+/* hide border when overlay is open*/
+.navbar.open {
+    border-bottom-color: transparent;
 }
 
 .logo {
@@ -21,54 +26,37 @@ nav {
     letter-spacing: 0.12em;
 }
 
-.navlink {
-    height: 100%;
-}
+.navlink { height: 100%; }
 
 .navlink ul {
     height: 100%;
-
     list-style: none;
     display: flex;
     gap: 32px;
-    margin: 0;
-    padding: 0;
+    margin: 0; padding: 0;
 }
 
 .navlink a {
     display: flex;
     align-items: center;
-    position: relative;
-
     color: var(--muted);
-    font-family: var(--head);
-    font-size: 13px;
     font-size: 0.7em;
     font-weight: 600;
     letter-spacing: .1em;
     text-decoration: none;
     white-space: nowrap;
-
     transition: color .2s;
 }
 
-.navlink li {
-    position: relative;
+.navlink a:hover li { color: var(--text); }
 
-
-}
-
-.navlink a:hover li {
-    color: var(--text);
-}
+.navlink li { position: relative; }
 
 .navlink li::after {
     content: '';
     position: absolute;
-    left: 0;
-    bottom: -4px;
-    width: 100%;
-    height: 2px;
+    left: 0; bottom: -4px;
+    width: 100%; height: 2px;
     background-color: var(--red);
     transform: scaleX(0);
     transform-origin: right;
@@ -78,5 +66,105 @@ nav {
 .navlink a:hover li::after {
     transform: scaleX(1);
     transform-origin: left;
+}
+
+/* === Hamburger -> X === */
+.menuBtn {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    width: 32px;
+    height: 32px;
+}
+
+.menuBtn span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: var(--text);
+    border-radius: 2px;
+    transition: transform 0.35s ease, opacity 0.2s ease;
+    transform-origin: center;
+}
+
+/* transform into X */
+.menuBtn.menuOpen span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.menuBtn.menuOpen span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+.menuBtn.menuOpen span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* === Overlay === */
+.overlay {
+    clip-path: circle(0% at 100% -2%);
+    background-color: rgb(150, 9, 9);
+
+    position: fixed;
+    inset: 0;
+    background: #0a0a0a;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    pointer-events: none;
+    transition: clip-path 0.5s cubic-bezier(0.97, 0.11, 0.47, 0.99);
+}
+
+.overlayLinks a {
+    font-family: var(--heading);
+    font-size: clamp(2rem, 10vw, 4rem);
+    font-weight: 700;
+    line-height: 1em;
+    color: #555;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: color 0.2s;
+}
+
+.overlay.open {
+    pointer-events: all;
+    clip-path: circle(200% at 90% -10%);
+}
+
+.overlayLinks {
+    list-style: none;
+    padding: 0; 
+    margin: 0;
+}
+
+.overlayLinks li {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition-delay: calc(var(--i) * 0.07s + 0.3s);
+}
+
+.overlayLogo {
+        font-size: clamp(64px, 20vw, 128px) !important;
+}
+
+.overlay.open .overlayLinks li {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.overlayLinks a:hover { color: var(--red); }
+
+/* === Responsywność === */
+@media (max-width: 768px) {
+    .navlink { display: none; }
+    .menuBtn { display: flex; }
 }
 

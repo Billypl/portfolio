@@ -32,20 +32,6 @@
     color: var(--red);
 }
 
-.name {
-    font-family: var(--heading);
-    font-size: clamp(64px, 9vw, 120px);
-    font-weight: 900;
-    line-height: .9;
-    text-transform: uppercase;
-    margin-bottom: 28px;
-    margin-top: 0px;
-}
-
-.name span {
-    color: var(--red);
-}
-
 .desc1 {
     font-size: 15px;
     line-height: 1.75;
@@ -68,7 +54,7 @@
     margin-top: 36px;
 }
 
-  .buttons a {
+.buttons a {
     flex: 1;
     justify-content: center;
 }
@@ -76,13 +62,11 @@
 .imageCol {
     flex: 1;
     position: relative;
-    z-index: 1;
     overflow: hidden;
 }
 
 .image {
     position: relative;
-    z-index: 1;
     width: 100%;
     max-width: 420px;
     border-bottom: 1px solid var(--border);

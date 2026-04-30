@@ -1,20 +1,57 @@
-import styles from './Navbar.module.css'
+import { useState } from 'react';
+import styles from './Navbar.module.css';
+import Logo from '../components/Logo';
+
+const links = [
+  { label: "O MNIE",   href: "#about"      },
+  { label: "PROJEKTY", href: "#projects"   },
+  { label: "EDUKACJA", href: "#education"  },
+  { label: "PRACA",    href: "#experience" },
+  { label: "KONTAKT",  href: "#contact"    },
+];
 
 function Navbar() {
-    return (<>
-    <nav className={styles.navbar}>
-        <div className={styles.logo}> BILLY </div>
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <>
+      <nav className={`${styles.navbar} ${isOpen ? styles.open : ""}`}>
+        <div className={styles.logo}>BILLY</div>
+
+        {/* Desktop */}
         <div className={styles.navlink}>
-            <ul>
-                <a href="#about">      <li> O MNIE     </li></a>
-                <a href="#projects">   <li> PROJEKTY   </li></a>
-                <a href="#education">  <li> EDUKACJA   </li></a>
-                <a href="#experience"> <li> PRACA      </li></a>
-                <a href="#contact">    <li> KONTAKT    </li></a>
-            </ul>
+          <ul>
+            {links.map(({ label, href }) => (
+              <a key={href} href={href}>
+                <li>{label}</li>
+              </a>
+            ))}
+          </ul>
         </div>
-    </nav>
-    </>);
+
+        {/* Hamburger / X */}
+        <button
+          className={`${styles.menuBtn} ${isOpen ? styles.menuOpen : ""}`}
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Menu"
+        >
+          <span /><span /><span />
+        </button>
+      </nav>
+
+      {/* Mobile overlay */}
+      <div className={`${styles.overlay} ${isOpen ? styles.open : ""}`}>
+        <Logo className={styles.overlayLogo} />
+        <ul className={styles.overlayLinks}>
+          {links.map(({ label, href }, i) => (
+            <li key={href} style={{ "--i": i }}>
+              <a href={href} onClick={() => setIsOpen(false)}>{label}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </>
+  );
 }
 
-export default Navbar
+export default Navbar;

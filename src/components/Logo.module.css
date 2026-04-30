@@ -1,0 +1,13 @@
+.name {
+    font-family: var(--heading);
+    font-size: clamp(64px, 9vw, 120px);
+    font-weight: 900;
+    line-height: .9;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+    margin-top: 0px;
+}
+
+.name span {
+    color: var(--red);
+}

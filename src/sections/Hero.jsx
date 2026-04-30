@@ -1,6 +1,7 @@
 import styles from './Hero.module.css'
 import myPicture from '../assets/myPicture.png'
 import Button from '../components/Button';
+import Logo from '../components/Logo';
 
 function Hero() {
     return (<>
@@ -8,7 +9,7 @@ function Hero() {
         <div className={styles.textCol}>
             <p className={styles.eyebrow}>Student informatyki - politechnika gdańska</p>
             <div className={styles.content}>
-                <h1 className={styles.name}>BILLY<span>.</span></h1>
+                <Logo/>
                 <p className={styles.desc1}>Studiuję Informatykę na drugim stopniu na Politechnice Gdańskiej. Kocham czytać książki, a na ogniska nie ruszam się bez gitary. Moją pasją jest programowanie - z naciskiem na backend.</p>
                 <p className={styles.desc2}>Chętnie pomagam w pracach domowych i udzielam korepetycji z informatyki.</p>
             </div>
