@@ -6,17 +6,6 @@
     pointer-events: none;
 } */
 
-.hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;  
-    position: relative;
-    gap: 50px;
-    /* padding-top: 80px !important; */
-}
-
 .textCol {
     flex: 1;
     position: relative;

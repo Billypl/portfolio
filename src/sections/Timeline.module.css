@@ -1,9 +1,0 @@
-.timeline {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;  
-    position: relative;
-    gap: 50px;
-}
