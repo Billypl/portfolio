@@ -67,9 +67,9 @@ body {
 }
 
 #root {
-  /* width: 1126px; */
+  display: flex;
+  align-items: center;
   max-width: 100%;
-  /* margin: 0 auto; */
   text-align: center;
   min-height: 100svh;
   display: flex;
