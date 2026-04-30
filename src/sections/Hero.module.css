@@ -1,23 +1,23 @@
-.hero::before {
+/* .hero::before {
     content: '';
     position: absolute;
     inset: 0;
     background: radial-gradient(ellipse at 70% 35%, rgba(139, 0, 0, .22) 0%, transparent 60%);
     pointer-events: none;
-}
+} */
 
 .hero {
     min-height: 100vh;
-    background: var(--black);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     align-items: center;
-    padding: 0 80px 0;
-    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;  
     position: relative;
+    gap: 50px;
 }
 
 .textCol {
+    flex: 1;
     position: relative;
     text-align: left;
     /* z-index: 1; */
@@ -63,15 +63,18 @@
 
 .buttons{
     display: flex;
+    flex-wrap: wrap;
     gap: 12px;
     margin-top: 36px;
-    flex-wrap: wrap;
+}
+
+  .buttons a {
+    flex: 1;
+    justify-content: center;
 }
 
 .imageCol {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    flex: 1;
     position: relative;
     z-index: 1;
     overflow: hidden;
@@ -98,3 +101,18 @@
     border-radius: 50%;
 } */
 
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column-reverse;
+    gap: 20px;
+    padding: 30px;
+  }
+
+  .imageCol, .textCol {
+    flex: none;
+  }
+  .name {
+    margin-bottom: 15px;
+  }
+
+}

@@ -1,0 +1,14 @@
+.mainContainer {
+    background: var(--black);
+    max-width: 1900px;
+    display: flex;
+    justify-content: center;
+}
+
+.mainContainer::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 70% 35%, rgba(139, 0, 0, .22) 0%, transparent 60%);
+    pointer-events: none;
+}
