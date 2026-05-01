@@ -1,0 +1,51 @@
+
+/* Karta */
+.card {
+    position: relative;
+    overflow: hidden;
+    font-weight: 800;
+
+    background: var(--lighter-black);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 24px;
+}
+
+.card h3 {
+    font-family: var(--heading);
+    font-size: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    margin-bottom: 6px;
+    margin-top: 6px;
+}
+
+.card p {
+    margin: 0;
+    font-size: 0.7rem;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.watermark {
+    position: absolute;
+    right: -8px;
+    bottom: -14px;
+    font-family: var(--heading);
+    font-size: 96px;
+    font-weight: 900;
+    line-height: 1;
+    color: rgba(255, 255, 255, .028);
+    pointer-events: none;
+    user-select: none;
+}
+
+.year {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--red);
+    letter-spacing: 0.1em;
+    margin-bottom: 6px;
+}
+

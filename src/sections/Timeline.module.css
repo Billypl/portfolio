@@ -1,0 +1,82 @@
+/* Timeline.module.css */
+
+.inner {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.spine {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--border);
+    transform: translateX(-50%);
+}
+
+.spine::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70%;
+    background: linear-gradient(to bottom, var(--red), transparent);
+}
+
+.items {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    max-width: 900px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 60px 1fr;
+    align-items: center;
+    gap: 16px;
+}
+
+
+/* Środkowa kolumna */
+.hub {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.dot {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: var(--red);
+    border: 3px solid var(--light-black);
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 0 14px rgba(180, 17, 17, .7);
+}
+
+.blank {
+    /* pusta kolumna — placeholder */
+}
+
+
+/* Mobile */
+@media (max-width: 640px) {
+    .row {
+        grid-template-columns: 1fr;
+    }
+
+    .hub, .blank {
+        display: none;
+    }
+
+    .spine {
+        left: 16px;
+    }
+}

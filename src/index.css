@@ -18,6 +18,9 @@
   --red: #cc1111;
   --dark-red: #6d0f0f;
   --black: #0b0b0b;
+  --light-black: #111111;
+  --lighter-black: #181818;
+  
   --muted: #888;
   --text: #e8e8e8;
 
@@ -71,7 +74,6 @@ body {
   display: flex;
   align-items: center;
   max-width: 100%;
-  text-align: center;
   min-height: 100svh;
   display: flex;
   flex-direction: column;
