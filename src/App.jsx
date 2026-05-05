@@ -9,31 +9,33 @@ import Skills from './sections/Skills'
 import Contact from './sections/Contact'
 import Footer from './sections/Footer'
 import Hobby from './sections/Hobby'
+import { LanguageProvider } from "./context/LanguageContext";
 
 function App() {
 
   return (
     <>
-      <Navbar/>
-      <div className={style.mainContainer}>
-        <Hero/>
-        <Wave1 width="150px"/>
-        <Experience/> {/* edu, work, github, skills */}
-        <Skills/>
-        <Wave1 color='var(--dark-red)' width="150px"/>
-        <Projects/>
-        <Wave1 color='var(--dark-red)' width="150px"/>
-        <Timeline/>
-        <Wave1 color='var(--dark-red)' width="150px"/>
-        <Hobby/>
-        <Wave1 color='var(--dark-red)' width="150px"/>
-        <Contact/>
-        <Wave1 color='var(--dark-red)' width="150px"/>
-        <Footer/> 
-      </div>
+      <LanguageProvider>
+        <Navbar/>
+        <div className={style.mainContainer}>
+          <Hero/>
+          <Wave1 width="150px"/>
+          <Experience/> {/* edu, work, github, skills */}
+          <Skills/>
+          <Wave1 color='var(--dark-red)' width="150px"/>
+          <Projects/>
+          <Wave1 color='var(--dark-red)' width="150px"/>
+          <Timeline/>
+          <Wave1 color='var(--dark-red)' width="150px"/>
+          <Hobby/>
+          <Wave1 color='var(--dark-red)' width="150px"/>
+          <Contact/>
+          <Wave1 color='var(--dark-red)' width="150px"/>
+          <Footer/> 
+        </div>
+      </LanguageProvider>
     </>
   )
 }
 
 export default App
-// first payment do usunięcia z Wave1 color="var(--content1)" height="150px"/>

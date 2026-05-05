@@ -169,3 +169,42 @@ nav {
     .menuBtn { display: flex; }
 }
 
+/* === Nav right (toggle + hamburger) === */
+.navRight {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* === Language Toggle === */
+.toggle {
+  display: flex;
+  border: 1px solid #2a2a2a;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.toggleBtn {
+  padding: 5px 10px;
+  font-family: var(--heading);
+  font-size: 0.65em;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.toggleBtn.active {
+  background: var(--red);
+  color: #fff;
+}
+
+/* Na mobile toggle zostaje widoczny obok hamburgera */
+@media (max-width: 768px) {
+  .toggle {
+    border-color: #1e1e1e;
+  }
+}
