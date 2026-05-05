@@ -8,6 +8,7 @@ import Experience from './sections/Experience'
 import Skills from './sections/Skills'
 import Contact from './sections/Contact'
 import Footer from './sections/Footer'
+import Hobby from './sections/Hobby'
 
 function App() {
 
@@ -17,17 +18,18 @@ function App() {
       <div className={style.mainContainer}>
         <Hero/>
         <Wave1 width="150px"/>
-        <Timeline/>
+        <Experience/> {/* edu, work, github, skills */}
+        <Skills/>
         <Wave1 color='var(--dark-red)' width="150px"/>
         <Projects/>
         <Wave1 color='var(--dark-red)' width="150px"/>
-        <Experience/>
+        <Timeline/>
         <Wave1 color='var(--dark-red)' width="150px"/>
-        <Skills/>
+        <Hobby/>
         <Wave1 color='var(--dark-red)' width="150px"/>
         <Contact/>
         <Wave1 color='var(--dark-red)' width="150px"/>
-        <Footer/>
+        <Footer/> 
       </div>
     </>
   )

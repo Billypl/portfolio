@@ -3,11 +3,13 @@ import styles from './Navbar.module.css';
 import Logo from '../components/Logo';
 
 const links = [
-  { label: "O MNIE",   href: "#about"      },
-  { label: "PROJEKTY", href: "#projects"   },
-  { label: "EDUKACJA", href: "#education"  },
-  { label: "PRACA",    href: "#experience" },
-  { label: "KONTAKT",  href: "#contact"    },
+  { label: "O MNIE",           href: "#aboutme"    },
+  { label: "EDUKACJA I PRACA", href: "#educationandwork"  },
+  { label: "UMIEJĘNOŚCI",      href: "#skills"     },
+  { label: "PROJEKTY",         href: "#projects"   },
+  { label: "TIMELINE",         href: "#timeline"   },
+  { label: "HOBBY",            href: "#hobby"      },
+  { label: "KONTAKT",          href: "#contact"    },
 ];
 
 function Navbar() {
