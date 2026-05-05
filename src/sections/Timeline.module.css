@@ -49,13 +49,12 @@
 }
 
 .dot {
-    width: 13px;
-    height: 13px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     background: var(--red);
     border: 3px solid var(--light-black);
     position: relative;
-    z-index: 2;
     box-shadow: 0 0 14px rgba(180, 17, 17, .7);
 }
 

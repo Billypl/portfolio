@@ -1,6 +1,6 @@
 .card {
     position: relative;
-    border-radius: 6px; /* o 2px mniej niż radius GlowBorder */
+    border-radius: 6px; /* o 2px less than radius GlowingBorder */
     padding: 24px;
     background: var(--lighter-black);
     cursor: pointer;
@@ -45,9 +45,8 @@
 }
 
 @media (max-width: 640px) {
-    .card {
-        padding: 16px;
-        margin: 26px;
+    .container {
+        padding: 20px;
     }
 
     .card h3 {

@@ -11,13 +11,6 @@ function Contact() {
             headerTitle="Kontakt"
             descriptionColor="var(--red)"
         >
-
-            <GlowBorder radius={14} thickness={2} speed={4} streak={0.25} c1="red" c2="rgba(61, 53, 53, 0.16)">
-                <div style={{ background: "#1a1a1f", padding: "24px 32px", color: "white" }}>
-                    twoja treść
-                </div>
-            </GlowBorder>
-
             Kontakt
         </Section>
     </>

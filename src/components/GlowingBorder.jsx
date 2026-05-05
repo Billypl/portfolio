@@ -191,7 +191,7 @@ export default function GlowBorder({
       style={{ position: "relative", padding: thickness, borderRadius: radius }}
     >
       <canvas ref={canvasRef} style={{ position: "absolute", inset: 0, pointerEvents: "none" }} />
-      <div style={{ position: "relative", zIndex: 1, borderRadius: Math.max(0, radius - thickness), overflow: "hidden" }}>
+      <div style={{ position: "relative", borderRadius: Math.max(0, radius - thickness), overflow: "hidden" }}>
         {children}
       </div>
     </div>
