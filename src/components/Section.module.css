@@ -15,7 +15,7 @@
     justify-content: center;
     width: 100%;
     padding-top: 200px;
-    padding-left: 100px;
+    padding-left: 4em;
 }
 
 .inner {
@@ -38,4 +38,11 @@
     justify-content: center;
 
     gap: 50px;
+}
+
+@media (max-width: 640px) {
+    .headerContainer {
+        padding-left: 20px;
+        padding-top: 120px;
+    }
 }

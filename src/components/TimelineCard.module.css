@@ -1,14 +1,9 @@
-
-/* Karta */
 .card {
     position: relative;
-    overflow: hidden;
-    font-weight: 800;
-
-    background: var(--lighter-black);
-    border: 1px solid var(--border);
-    border-radius: 8px;
+    border-radius: 6px; /* o 2px mniej niż radius GlowBorder */
     padding: 24px;
+    background: var(--lighter-black);
+    cursor: pointer;
 }
 
 .card h3 {
@@ -49,3 +44,19 @@
     margin-bottom: 6px;
 }
 
+@media (max-width: 640px) {
+    .card {
+        padding: 16px;
+        margin: 26px;
+    }
+
+    .card h3 {
+        font-size: 18px;
+    }
+
+    .watermark {
+        font-size: 64px;
+        right: -4px;
+        bottom: -8px;
+    }
+}
