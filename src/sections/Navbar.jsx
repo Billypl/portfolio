@@ -3,6 +3,7 @@ import styles from './Navbar.module.css';
 import Logo from '../components/Logo';
 import { useLanguage }    from "../context/LanguageContext";
 import { LanguageToggle } from "../components/LanguageToggle";
+import { T }              from "../components/T";
 
 const links = [
   { key: "nav.aboutme",          href: "#aboutme"          },
@@ -28,11 +29,12 @@ function Navbar() {
           <ul>
             {links.map(({ key, href }) => (
               <a key={href} href={href}>
-                <li>{t(key)}</li>
+                <li><T tkey={key} /></li>
               </a>
             ))}
           </ul>
         </div>
+        
 
         {/* Prawa strona: toggle + hamburger */}
         <div className={styles.navRight}>
@@ -53,7 +55,7 @@ function Navbar() {
         <ul className={styles.overlayLinks}>
           {links.map(({ key, href }, i) => (
             <li key={href} style={{ "--i": i }}>
-              <a href={href} onClick={() => setIsOpen(false)}>{t(key)}</a>
+              <a href={href} onClick={() => setIsOpen(false)}><T tkey={key} /></a>
             </li>
           ))}
         </ul>
