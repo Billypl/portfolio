@@ -10,6 +10,7 @@ import Contact from './sections/Contact'
 import Footer from './sections/Footer'
 import Hobby from './sections/Hobby'
 import { LanguageProvider } from "./context/LanguageContext";
+import Test from './sections/Test';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
       <LanguageProvider>
         <Navbar/>
         <div className={style.mainContainer}>
+          <Test/>ddasdsa
           <Hero/>
           <Wave1 width="150px"/>
           <Experience/> {/* edu, work, github, skills */}

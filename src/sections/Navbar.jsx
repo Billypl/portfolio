@@ -24,21 +24,22 @@ function Navbar() {
       <nav className={`${styles.navbar} ${isOpen ? styles.open : ""}`}>
         <div className={styles.logo}>BILLY</div>
 
-        {/* Desktop links */}
-        <div className={styles.navlink}>
-          <ul>
-            {links.map(({ key, href }) => (
-              <a key={href} href={href}>
-                <li><T tkey={key} /></li>
-              </a>
-            ))}
-          </ul>
-        </div>
-        
-
-        {/* Prawa strona: toggle + hamburger */}
+        {/* Right side: links + toggle + hamburger */}
         <div className={styles.navRight}>
+
+          {/* Desktop links */}
+          <div className={styles.navlink}>
+            <ul>
+              {links.map(({ key, href }) => (
+                <a key={href} href={href}>
+                  <li><T tkey={key} /></li>
+                </a>
+              ))}
+            </ul>
+          </div>
+
           <LanguageToggle />
+          
           <button
             className={`${styles.menuBtn} ${isOpen ? styles.menuOpen : ""}`}
             onClick={() => setIsOpen(!isOpen)}
@@ -46,6 +47,7 @@ function Navbar() {
           >
             <span /><span /><span />
           </button>
+        
         </div>
       </nav>
 
