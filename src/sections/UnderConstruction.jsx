@@ -146,6 +146,7 @@ const css = `
   --body: 'Barlow', system-ui, -apple-system, sans-serif;
 
   position: relative;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -170,7 +171,7 @@ const css = `
 
 /* pasy ostrzegawcze */
 .uc-hazard {
-  position: absolute; left: 0; right: 0; height: 22px; z-index: 2;
+  position: absolute; left: 0; right: 0; height: 22px; z-index: 1;
   background: repeating-linear-gradient(135deg, var(--red) 0 28px, #1a0606 28px 56px);
 }
 .uc-hazard.top { top: 0; }
