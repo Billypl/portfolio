@@ -1,0 +1,24 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.name {
+    font-family: var(--heading);
+    font-size: clamp(40px, 6vw, 68px);
+    font-weight: 900;
+    line-height: .9;
+    text-transform: uppercase;
+    margin-bottom: 52px;
+}
+
+.eyebrow {
+    font-family: var(--heading);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .28em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}

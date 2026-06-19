@@ -1,0 +1,34 @@
+.wrapper {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  vertical-align: bottom;
+}
+
+.stable {
+  display: inline-block;
+}
+
+.outgoing {
+  display: inline-block;
+  animation: slideOut var(--duration, 280ms) ease forwards;
+}
+
+.incoming {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  animation: slideIn var(--duration, 280ms) ease forwards;
+}
+
+@keyframes slideOut {
+  from { transform: translateY(0);     opacity: 1; }
+  to   { transform: translateY(-100%); opacity: 0; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(100%); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}

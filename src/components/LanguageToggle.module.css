@@ -1,0 +1,19 @@
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  font-size: 11px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+}
+.toggle .lang {
+  color: #555;
+  transition: color .2s;
+  padding: 2px 4px;
+  font-weight: 900;
+}
+.toggle .lang.active { color: #fff; }
+.toggle .sep { color: #e62222; font-weight: 900; }
