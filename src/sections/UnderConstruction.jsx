@@ -152,7 +152,6 @@ const css = `
   align-items: center;
   justify-content: center;
   min-height: 100vh;            /* pełna wysokość ekranu; zmień, jeśli chcesz krótszą sekcję */
-  padding: 96px 40px 120px;
   overflow: hidden;
   text-align: center;
   background: var(--black);
@@ -297,7 +296,6 @@ const css = `
 
 /* RWD */
 @media (max-width: 720px) {
-  .uc-section { padding: 86px 22px 110px; }
   .uc-post { display: none; }
   .uc-icon-wrap { width: 110px; height: 110px; margin-bottom: 28px; }
   .uc-icon-square { width: 76px; height: 76px; }
